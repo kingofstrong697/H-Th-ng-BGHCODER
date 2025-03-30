@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let accountDetails;
             if (username === 'Bí Mật 1') {
-                accountDetails = { username: '500,000 VND', information: 'Anh y eim thật 100%, koo y ai khác thật lòng anh 100% đó anh nói thật lòng rồi eim đừng cóa nói anh thích con khác nữa anh nghĩ nhiều... (đừng nói ai anh bị ngại hehe)' };
+                accountDetails = { username: '500,000 VND', information: 'Anh y eim thật 100%, koo y ai khác thật lòng anh 100% đoá anh nói thật lòng rồi eim đừng cóa nói anh thích con khác nữa anh bùn... (đừng nói ai anh bị ngại hehe)' };
             } else if (username === 'Bí Mật 2') {
                 accountDetails = { username: '300,000 VND', information: 'C anh 15cm hehe' };
             } else if (username === 'Bí Mật 3') {

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hưng Love Dương</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Hưng Love Dương</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Trang Chủ</a></li>
+                <li><a href="#accounts">Bí mật</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button id="admin-login">Đăng nhập Admin</button>
+            <button id="user-login">Đăng nhập</button>
+            <button id="register">Đăng ký</button>
+        </div>
+        <div class="user-info" style="display: none;">
+            <p id="welcome-message"></p>
+            <p id="account-balance"></p>
+            <button id="logout">Đăng xuất</button>
+            <button id="gift-money" style="display: none;">Tặng tiền</button>
+            <button id="messages" style="display: none; position: relative;">
+                Thư
+                <span id="message-indicator" style="display: none; position: absolute; top: 0; right: 0; background: red; color: white; border-radius: 50%; width: 10px; height: 10px; font-size: 0.7rem;"></span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Chào mừng đến với Hệ thống của BGHCODER dành choa Dương</h2>
+            <p>Tìm Bí Mật Của BGHCODER ngay hôm nay!</p>
+        </section>
+        <section id="accounts">
+            <h2>Danh Sách Bí Mật</h2>
+            <div id="account-list"></div>
+        </section>
+        <section id="contact">
+            <h2>Liên Hệ Với BGHCODER</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Tên của bạn" required>
+                <input type="email" id="email" placeholder="Email của bạn" required>
+                <textarea id="message" placeholder="Tin nhắn của bạn" required></textarea>
+                <button type="submit">Gửi</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Hưng Love Dương. Bản quyền thuộc về BGHCODER.</p>
+    </footer>
+    <div id="vip-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>VIP 1</h2>
+            <button id="close-modal">Đóng</button>
+        </div>
+    </div>
+    <div id="vip-modal-2" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>VIP 2</h2>
+            <button id="close-modal-2">Đóng</button>
+        </div>
+    </div>
+    <div id="vip-modal-3" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>VIP 3</h2>
+            <button id="close-modal-3">Đóng</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

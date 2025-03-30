@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const showUserInfo = (username, balance) => {
-        welcomeMessage.textContent = `Xin chào, ${username}`;
+        welcomeMessage.textContent = `Xin chào cái lồn, ${username}`;
         accountBalance.textContent = `Số dư: ${balance === Infinity ? 'Vô hạn' : `${balance} VND`}`;
         userInfo.style.display = 'block';
         authButtons.style.display = 'none';
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = 'flex';
         modal.innerHTML = `
             <div class="modal-content">
-                <h2>Thông Tin Bí Mật con cặc</h2>
+                <h2>Thông Tin Bí Mật</h2>
                 <p><strong>Gói:</strong> ${username}</p>
                 <p><strong>Thông Tin:</strong> ${password}</p>
                 <button id="close-purchase-modal">Đóng</button>

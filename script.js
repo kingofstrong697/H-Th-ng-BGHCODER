@@ -384,3 +384,12 @@ document.addEventListener('DOMContentLoaded', () => {
     viewAccountsButton.addEventListener('click', () => {
         showAccountsModal();
     });
+
+                          logoutButton.addEventListener('click', () => {
+        hideUserInfo();
+        alert('Đăng xuất thành công!');
+        giftMoneyButton.style.display = 'none';
+        messagesButton.style.display = 'none';
+        viewAccountsButton.style.display = 'none';
+        messageIndicator.style.display = 'none';
+    });

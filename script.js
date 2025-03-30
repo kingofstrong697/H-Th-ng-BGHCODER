@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = 'flex';
         modal.innerHTML = `
             <div class="modal-content">
-                <h2>Thông Tin Bí Mật</h2>
+                <h2>Thông Tin Bí Mật con cặc</h2>
                 <p><strong>Gói:</strong> ${username}</p>
                 <p><strong>Thông Tin:</strong> ${password}</p>
                 <button id="close-purchase-modal">Đóng</button>

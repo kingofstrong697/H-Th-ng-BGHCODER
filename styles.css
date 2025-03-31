@@ -232,6 +232,73 @@ form button:hover {
     background: #feb47b;
 }
 
+.modal-content label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.modal-content input {
+    width: calc(100% - 1.6rem);
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.modal-content input:focus {
+    outline: none;
+    border-color: #ff7e5f;
+}
+
+.modal-content button {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-content form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.modal-content form input {
+    width: calc(100% - 1.6rem);
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.modal-content form input:focus {
+    outline: none;
+    border-color: #ff7e5f;
+}
+
+.modal-content form button {
+    background: #ff7e5f;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.modal-content form button:hover {
+    background: #feb47b;
+}
+
 #messages {
     background: #ff7e5f;
     color: #fff;
@@ -279,6 +346,22 @@ form button:hover {
     background: #feb47b;
 }
 
+#account-info {
+    background: #ff7e5f;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 0.5rem;
+}
+
+#account-info:hover {
+    background: #feb47b;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -322,4 +405,11 @@ footer {
     color: #fff;
     font-size: 0.9rem;
     margin-top: 2rem;
+}
+
+.corner-image {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transform: rotate(180deg); /* Rotate the image upside down */
 }

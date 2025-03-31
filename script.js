@@ -267,6 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
             accounts.push({ username, password, balance: 0 });
             saveAccounts();
             alert('Đăng ký thành công!');
+            updateAccountsModal(); // Update the admin's account list
             modal.remove();
         });
     };
@@ -517,23 +518,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    const showAccountDetailsModal = (account) => {
-        const modal = document.createElement('div');
-        modal.className = 'modal';
-        modal.style.display = 'flex';
-        modal.innerHTML = `
-            <div class="modal-content">
-                <h2>Chi tiết tài khoản</h2>
-                <p><strong>Tài khoản:</strong> ${account.username}</p>
-                <p><strong>Mật khẩu:</strong> ${account.password}</p>
-                <button id="close-account-details-modal">Đóng</button>
-            </div>
-        `;
-        document.body.appendChild(modal);
-
-        document.getElementById('close-account-details-modal').addEventListener('click', () => {
-            modal.remove();
-        });
+    const updateAccountsModal = () => {
+        const modal = document.querySelector('.modal-content');
+        if (modal) {
+            modal.querySelector('div').innerHTML = accounts.length > 0
+                ? `
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th style="border: 1px solid #ddd; padding: 8px;">Tài khoản</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">Mật khẩu</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">Số dư</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${accounts.map(acc => `
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px;">${acc.username}</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px;">${acc.password}</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px;">${acc.balance === Infinity ? 'Vô hạn' : `${acc.balance} VND`}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                `
+                : '<p>Không có tài khoản nào được đăng ký.</p>';
+        }
     };
 
     viewAccountsButton.addEventListener('click', () => {

@@ -15,77 +15,85 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body class="bg-dark text-light">
-    <!-- Login Panel -->
-    <div id="loginContainer" class="login-overlay">
-        <div class="login-container bg-dark shadow">
-            <div class="text-center mb-4">
-                <h1 class="mb-3">Access Verification</h1>
-                <p class="lead">Enter your access key to continue</p>
-            </div>
-            
-            <form id="loginForm">
-                <div class="mb-3">
-                    <label for="keyInput" class="form-label">Access Key</label>
-                    <div class="input-group">
-                        <span class="input-group-text">
-                            <i class="fas fa-key"></i>
-                        </span>
-                        <input type="password" class="form-control" id="keyInput" 
-                               placeholder="Enter your key" required autocomplete="off">
+    <!-- Main Container for Center Alignment -->
+    <div class="main-container">
+        <!-- Login Panel (Initially Visible) -->
+        <div id="loginContainer" class="login-overlay">
+            <div class="login-container bg-dark shadow">
+                <div class="text-center mb-4">
+                    <h1 class="mb-3">Access Verification</h1>
+                    <p class="lead">Enter your access key to continue</p>
+                </div>
+                
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="keyInput" class="form-label">Access Key</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="fas fa-key"></i>
+                            </span>
+                            <input type="password" class="form-control" id="keyInput" 
+                                placeholder="Enter your key" required autocomplete="off">
+                        </div>
                     </div>
-                </div>
-                
-                <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-primary" id="loginButton">
-                        <i class="fas fa-sign-in-alt me-2"></i>Login
-                    </button>
-                </div>
-                
-                <div id="errorMessage" class="error-message text-center mt-3"></div>
-            </form>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary" id="loginButton">
+                            <i class="fas fa-sign-in-alt me-2"></i>Login
+                        </button>
+                    </div>
+                    
+                    <div id="errorMessage" class="error-message text-center mt-3"></div>
+                </form>
+            </div>
         </div>
-    </div>
-    
-    <!-- Control Panel (Initially Hidden) -->
-    <div id="controlPanel" class="control-panel-section hidden">
-        <div class="container py-5">
+        
+        <!-- Control Panel (Initially Hidden) -->
+        <div id="controlPanel" class="control-panel-container hidden">
             <div class="control-panel bg-dark shadow p-4 rounded">
                 <div class="text-center mb-4">
-                    <div class="dev-credit text-info">dev: GiaHungXBGHCODER</div>
+                    <div class="dev-credit">dev: GiaHungXBGHCODER</div>
                     <h2 class="mb-4">Control Panel</h2>
                 </div>
                 
                 <div class="row g-3">
-                    <div class="col-md-6">
+                    <!-- First Row: 2 buttons side by side -->
+                    <div class="col-6">
                         <button class="btn btn-secondary btn-control">
                             <i class="fas fa-crosshairs me-2"></i>AIM LOCK
                         </button>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-6">
                         <button class="btn btn-secondary btn-control">
                             <i class="fas fa-heart me-2"></i>NHẸ TÂM
                         </button>
                     </div>
-                    <div class="col-md-6">
+                    
+                    <!-- Second Row: 2 buttons side by side -->
+                    <div class="col-6">
                         <button class="btn btn-secondary btn-control">
                             <i class="fas fa-bullseye me-2"></i>BÁM ĐẦU
                         </button>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-6">
                         <button class="btn btn-secondary btn-control">
                             <i class="fas fa-bolt me-2"></i>BUFF NHẠY
                         </button>
                     </div>
-                    <div class="col-md-6">
+                    
+                    <!-- Third Row: 2 buttons side by side -->
+                    <div class="col-6">
                         <button class="btn btn-secondary btn-control">
                             <i class="fas fa-sliders-h me-2"></i>SENSIVITY
                         </button>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-6">
                         <button class="btn btn-secondary btn-control">
                             <i class="fas fa-ban me-2"></i>FIX RUNG
                         </button>
                     </div>
+                    
+                    <!-- Fourth Row: 1 full-width button -->
                     <div class="col-12">
                         <button class="btn btn-secondary btn-control">
                             <i class="fas fa-wrench me-2"></i>FIX LỐ
